@@ -19,7 +19,7 @@ RUN install-php-extensions memcached
 
 RUN install-php-extensions zookeeper-0.5.0
 
-RUN install-php-extensions mysql
+RUN install-php-extensions PDO_MySQL
 
 ## 开启 QConf
 RUN cd /usr/local/qconf/conf && echo 'zookeeper.dev=10.10.10.100:2181' > idc.conf && echo 'dev' > localidc \
