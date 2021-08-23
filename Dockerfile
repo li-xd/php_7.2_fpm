@@ -22,5 +22,7 @@ RUN install-php-extensions zookeeper-0.5.0
 RUN install-php-extensions mysql
 
 ## 开启 QConf
-RUN cd /usr/local/qconf/conf && echo 'zookeeper.dev=10.10.10.100:2181' > idc.conf && echo 'dev' > localidc && ../bin/qconf_agent \
+RUN cd /usr/local/qconf/conf && echo 'zookeeper.dev=10.10.10.100:2181' > idc.conf && echo 'dev' > localidc \
 && mkdir -p /www/site/logs/fun && chmod -R 777 /www/site/logs/fun && mkdir -p /www/site/logs/202108/ && chmod -R 777 /www/site/logs/202108/
+
+ENTRYPOINT ["sh /usr/local/qconf/bin/qconf_agent"]
