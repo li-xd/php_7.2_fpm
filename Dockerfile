@@ -21,7 +21,7 @@ RUN install-php-extensions zookeeper-0.5.0
 
 RUN install-php-extensions PDO_MySQL
 
-RUN install-php-extensions mosquitto
+RUN install-php-extensions Mosquitto-alpha
 
 ## 开启 QConf
 RUN cd /usr/local/qconf/conf && echo 'zookeeper.dev=10.10.10.100:2181' > idc.conf && echo 'dev' > localidc \
